@@ -42,7 +42,6 @@ class App(Frame):
         self.loadBrain.grid(row=buttonrow, column=1, pady=16)
         self.startStop.grid(row=buttonrow, column=2, pady=16)
         self.toggleFast.grid(row=buttonrow, column=3, pady=16)
-        self.plot.grid(row=buttonrow, column=4, pady=16)
 
         self.status.grid(row=2, column=0, columnspan=7, sticky="NSEW")
         
@@ -85,10 +84,6 @@ class App(Frame):
         self.startStop.config(text="Start")
         self.startStop.config(command = self.start)
         self.map.stop()
-        
-    def plot(self):
-        plt.plot(self.map.car.brain.loss)
-        plt.show()
         
 class RoadPalette(ttk.Frame):
 
