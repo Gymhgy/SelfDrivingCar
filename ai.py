@@ -134,6 +134,7 @@ class Brain:
         
         #Intialize a tensor with BATCH_SIZE zeroes
         next_state_values = torch.zeros(BATCH_SIZE)
+        
         #Using the mask we made of Trues and Falses
         #Example: mask = [True, True, False, True, False], next_state_values = [0,0,0,0,0]
         #next_state_values[mask] = [3, 4, 1]

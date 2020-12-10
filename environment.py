@@ -74,7 +74,7 @@ class Car:
         #Turn our reward into a tensor (array) that only contains one element: the reward
         reward = torch.tensor([reward]).float()
         #Add this transition to our experience buffer
-        self.memory.add(state, action, new_state, reward)
+        self.brain.memory.add(state, action, new_state, reward)
         #Update our brain and the neural networks
         self.brain.optimize()
         #Update the target network to match the policy network

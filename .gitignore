@@ -1,3 +1,5 @@
 brain.pth
 .spyderproject
 .spyproject
+
+__pycache__

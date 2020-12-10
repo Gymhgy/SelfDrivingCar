@@ -8,7 +8,6 @@ from ai import Brain
 import numpy as np
 import torch
 import cmath
-import matplotlib.pyplot as plt
 
 class App(Frame):
     def __init__(self, parent, *args, **kwargs):
@@ -23,10 +22,7 @@ class App(Frame):
         
         self.toggleFast = ttk.Button(self, text = "Fast Mode On", command = self.toggle_fast)
         self.fast = True
-        brain = Brain(5,3)
-
-        self.plot = ttk.Button(self, text = "Plot", command = self.plot)
-        
+        brain = Brain(5,3)        
 
         #Initialize map and road
         self.map = Map(self, Car(brain), width=700,height=500)
